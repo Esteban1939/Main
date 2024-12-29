@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Web Interactive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="video-background">
+    <video autoplay muted loop id="bg-video">
+        <source src="vecteezy_prague-czech-republic-september-14-2022-white-audi-at-a_49658724.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la balise vidéo.
+    </video>
+</div>
+<header class="bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1>Audi</h1>
+        <nav class="mt-3">
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link text-white" href="#home">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#about">À propos</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="changeColorBtn" class="btn btn-light mt-3">Changer la couleur de fond</button>
+    </div>
+</header>
+<main class="py-5">
+    <section id="home" class="container my-5">
+        <div class="text-white">
+            <h2>Accueil</h2>
+            <p>Bienvenue sur notre site interactif avec une vidéo en arrière-plan.</p>
+            <img src="images/audi1.jpg" class="img-fluid" alt="Audi Car 1">
+        </div>
+    </section>
+    <section id="about" class="container my-5 bg-light p-5 rounded">
+        <h2 class="text-center">À propos</h2>
+        <p class="text-center">Nous sommes une entreprise dédiée à fournir les meilleurs services.</p>
+    </section>
+    <section id="services" class="container my-5">
+        <h2 class="text-center">Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="AdobeStock_373832068_Preview_Editorial_Use_Only.jpeg" class="card-img-top" alt="Service 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Service vente</h5>
+                        <p class="card-text">Découvrez chez Audi Excellence une expérience de vente sur mesure, alliant élégance, innovation et performance, pour faire de votre prochaine Audi bien plus qu'une voiture : un art de vivre.</p>
+                        <a href="#" class="btn btn-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="CUSTOMER-SERVICE.jpg" class="card-img-top" alt="Service 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Service après-vente</h5>
+                        <p class="card-text">Profitez de notre service après-vente de classe mondiale pour maintenir votre Audi dans un état impeccable et garantir une performance optimale à long terme et pour satisfaire le client.</p>
+                        <a href="#" class="btn btn-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="AdobeStock_482349013_Preview_Editorial_Use_Only.jpeg" class="card-img-top" alt="Service 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Expertise et Précision au Cœur de Votre Garage</h5>
+                        <p class="card-text">Personnalisez votre Audi selon vos goûts et préférences avec notre service de personnalisation sur mesure, pour une expérience de conduite unique et exclusive.</p>
+                        <a href="#" class="btn btn-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="container my-5 bg-light p-5 rounded">
+        <h2 class="text-center">Contact</h2>
+        <form action="add_user.php" method="post">
+            <div class="mb-3">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="nom" name="nom" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="mot_de_passe" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="mot_de_passe" name="mot_de_passe" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+    </section>
+</main>
+<footer class="bg-primary text-white text-center py-3">
+    <p>&copy; 2024 Mon Site Web. Tous droits réservés.</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
