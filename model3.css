@@ -1,0 +1,13 @@
+body {
+    background-image: url('AdobeStock_1039784377_Preview_Editorial_Use_Only.jpeg');
+    background-size: cover; /* Ajuste l'image pour couvrir toute la page */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-attachment: fixed; /* Fixe l'image lors du défilement */
+    background-position: center; /* Centre l'image */
+}
+
+
+/* Style pour le titre des spécifications techniques */
+h2.text-center {
+    color: white;
+}

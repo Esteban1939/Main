@@ -28,3 +28,12 @@ window.addEventListener('load', function() {
         section.classList.add('animate__animated', 'animate__fadeInUp');
     });
 });
+
+document.addEventListener('scroll', function() {
+    const footer = document.getElementById('footer');
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        footer.classList.add('show-footer');
+    } else {
+        footer.classList.remove('show-footer');
+    }
+});

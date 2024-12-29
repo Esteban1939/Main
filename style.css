@@ -1,3 +1,9 @@
+/* Redimensionner le logo Audi */
+.logo {
+    width: 150px; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Maintient les proportions de l'image */
+}
+
 /* Style de base pour la page */
 body {
     font-family: 'Arial', sans-serif;
@@ -26,19 +32,42 @@ body {
 
 /* Style pour l'en-tête */
 header {
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent; /* Supprime le fond bleu */
     color: white;
     padding: 20px;
     text-align: center;
+    border: none; /* Supprime toute bordure */
 }
 
 header h1 {
     font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Supprimer les bordures et ajuster les liens de navigation */
+.nav-link {
+    border: none; /* Supprime les bordures */
+    padding: 5px 10px;
+    color: white; /* Garde le texte en blanc */
+    text-decoration: none; /* Supprime les soulignements */
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover, .nav-link:focus {
+    border: none; /* Supprime toute bordure au survol */
+    outline: none; /* Supprime la bordure par défaut au focus */
+    color: #ffdd57; /* Applique une couleur dorée au survol */
+}
+
+/* Désactiver les bordures bleues par défaut pour tous les éléments en focus */
+:focus {
+    outline: none;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -51,16 +80,25 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #ffdd57;
-}
-
 /* Style pour les boutons */
 button {
     padding: 10px 20px;
     font-size: 16px;
     margin-top: 10px;
     cursor: pointer;
+    border: none; /* Supprime les bordures */
+    background-color: #343a40; /* Couleur de fond plus foncée */
+    color: white; /* Couleur du texte en blanc */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button:focus {
+    outline: none; /* Désactiver la bordure bleue par défaut */
+}
+
+button:hover {
+    background-color: #ffdd57; /* Couleur de fond jaune doré au survol */
+    color: #343a40; /* Couleur du texte foncée au survol */
 }
 
 /* Style pour le contenu principal */
@@ -71,9 +109,11 @@ main {
 /* Style pour les sections */
 section {
     transition: transform 0.3s, box-shadow 0.3s;
-    background: rgba(255, 255, 255, 0.8);
+    background: #343a40; /* Couleur de fond plus foncée */
+    color: white; /* Couleur du texte en blanc */
     padding: 20px;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 section:hover {
@@ -81,9 +121,16 @@ section:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Ajuster les styles pour les sections avec fond blanc */
+section.bg-light {
+    background: #495057; /* Couleur de fond plus foncée */
+}
+
 /* Style pour les cartes */
 .card {
     transition: transform 0.3s, box-shadow 0.3s;
+    background: #495057; /* Fond plus foncé pour les cartes */
+    color: white; /* Texte en blanc */
 }
 
 .card img {
@@ -98,33 +145,55 @@ section:hover {
     padding: 15px;
 }
 
-/* Animation de base pour les cartes */
-@keyframes hoverEffect {
-    from {
-        transform: scale(1);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    to {
-        transform: scale(1.05);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
+/* Effet de hover sur les cartes */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Classe pour l'effet de hover sur les cartes */
-.card:hover {
-    animation: hoverEffect 0.3s forwards;
+/* Style pour les formulaires de contact et de connexion */
+form .form-control {
+    background-color: #222;
+    border: 1px solid #555;
+    color: #fff;
+}
+
+form .form-control:focus {
+    background-color: #333;
+    border-color: #007bff;
+    color: #fff;
+}
+
+form .btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+form .btn-primary:hover {
+    background-color: #0056b3;
 }
 
 /* Style pour le pied de page */
 footer {
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent; /* Supprime le fond bleu */
     color: white;
-    position: fixed;
-    bottom: 0;
     width: 100%;
     padding: 10px 0;
+    margin: 0;
+    border: none; /* Supprime toute bordure */
+    text-align: center;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
+/* Réduire les marges dans le pied de page */
+footer p {
+    margin: 0;
+}
+
+/* Responsiveness pour les petits écrans */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -139,6 +208,16 @@ footer {
     }
 
     section {
-        width: 80%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .card img {
+        height: 150px;
+    }
+
+    footer {
+        font-size: 0.8rem;
     }
 }
